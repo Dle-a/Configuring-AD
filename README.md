@@ -52,17 +52,30 @@ Before the client can join the domain, it is important to configure the DNS sett
 <br />
 
 <p>
-![Screenshot 2025-02-18 201734](https://github.com/user-attachments/assets/978a17d8-509f-4bdb-82f9-88061536fa91)
+<img width="694" alt="image" src="https://github.com/user-attachments/assets/e9ef09d9-2929-4eb0-b4e9-430de1b39466" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+It is now time to make the client VM join the domain. In the System menu of the client VM, click on Rename this PC (advanced) and Change. Enter the domain and necessary credentials in order to let the client join the domain. I am logging in as Jane Doe for the purposes of the lab. It is important to note that the login credentials have to be input within the context of the domain path. The client should now be part of the domain. On the domain controller, the client should now appear in Computers in the Active Directory Users and Computers panel.
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="407" alt="image" src="https://github.com/user-attachments/assets/90b5fcf8-a5ed-457b-952a-9560b38be4ee" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Before users in the domain can use the client computer, Remote Desktop has to be enabled for non-administrative users. While logged in as the administrator (in my case, Jane), open System Properties. Click on Remote Desktop and Select users that can remotely access this PC. Allow Domain Users access to Remote Desktop. Non-administrative users can now log in to Client-1. Normally a Group Policy can do the same and allows changes to many systems at once. For the purposes of this lab, a Group Policy won't be used to make this change.
+
+<img width="796" alt="image" src="https://github.com/user-attachments/assets/a34b14dc-beb2-4438-8435-af947a935642" />
+
 </p>
+<img width="805" alt="image" src="https://github.com/user-attachments/assets/7020e834-61c3-4ba1-be7a-b01a150d51e6" />
+
+<img width="863" alt="image" src="https://github.com/user-attachments/assets/bffb8fd3-0594-4c1f-94aa-d861530fe433" />
+
+After creating the users, Client-1 can now be signed in as one of the new users that were created from the PowerShell script. Pick a name and simply sign in to the client with the context of the domain. In my case, it is ernestotest.com\bon.rovej.
+
+
 <br />
+Doing this lab has made me learn how to set up Active Directory and join clients to the domain. I also created users and assigned the necessary permissions. Active Directory is not difficult to learn despite all the menu navigation that takes place. This lab is a segway for me to learn about DNS settings in-depth and file permissions in action. I will go into detail about these topics in other labs.
+

@@ -30,7 +30,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
   ![Screenshot 2025-04-29 172522](https://github.com/user-attachments/assets/63686da1-8880-4bf4-8e18-88096a9b17da)
 
-</p> Needs one more pictire above 
+</p> 
 
 
 
